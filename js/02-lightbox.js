@@ -17,7 +17,8 @@ const imgGalleryMarkup = galleryItems.map(({preview,original,description})=>{
 
 galleryRef.addEventListener('click', (evt)=>{
     evt.preventDefault();
+    if(evt.target.classList.contains("gallery__image")){
     let lightbox = new SimpleLightbox('.gallery a', { scrollZoom:false,captionDelay:250, captionsData:'alt',doubleTapZoom:1});
-   
+    }
 })
 
